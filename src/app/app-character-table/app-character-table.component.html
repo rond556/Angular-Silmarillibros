@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-2">Search:
+                <input type="text" [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+            <div>
+                <button class="btn btn-primary" (click)="resetFilters()">All</button>
+                <button class="btn btn-primary" (click)="this.raceListFilter='Ainu'">Ainu</button>
+                <button class="btn btn-primary" (click)="this.raceListFilter='Maia'">Maia</button>
+                <button class="btn btn-primary" (click)="this.raceListFilter='Elf'">Elf</button>
+                <button class="btn btn-primary" (click)="this.raceListFilter='Human'">Human</button>
+                <button class="btn btn-primary" (click)="this.raceListFilter='Dwarf'">Dwarf</button>
+                
+            </div>
+           
+    </div>
+        <div class="table-responsive">
+            <table class="table" *ngIf="characters.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary" (click)="toggleImage()">
+                                {{showImage ? 'Hide' : "Show"}} image
+                            </button>
+                        </th>
+                        <th><a href="#!" (click)="sortByName()">Name {{nameSorted ? "▼" : "▲"}}</a></th>
+                        <th><a href="#!" (click)="sortByRace()">Race {{raceSorted ? "▼" : "▲"}}</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="character-row" *ngFor="let character of filteredCharacters">
+                        <td>
+                                <button class="btn btn-link" (click)="open(character.id)">
+                                    <img *ngIf="showImage" id="character-art" [src]="character.imagePath"
+                                                            [title]="character.name">
+                                </button>
+                        </td>
+                        <td>{{character.name}}</td>
+                        <td>{{character.race}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>

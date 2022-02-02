@@ -1,0 +1,27 @@
+thead{
+    color: teal;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 60%;
+  }
+
+#character-art{
+    max-width: 230px;
+}
+
+.character-row:hover{
+    background-color:#C1E1C1;
+}
+
+.modal-xl .modal-lg {
+  max-width: 90%;
+}
