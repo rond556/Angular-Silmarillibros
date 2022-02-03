@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,7 @@ import { ArrayBreakerPipe } from './pipes/array-breaker.pipe';
     AppComponent, AppCharacterTableComponent, CharacterModalComponent, ArrayBreakerPipe
   ],
   imports: [ //Which external modules we are using
-    BrowserModule, NgbModule, FormsModule
+    BrowserModule, NgbModule, FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] //Our startup component

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CharacterModalService } from '../services/character-modal.service';
+import { CharacterModalService } from './character-modal.service';
 
 describe('CharacterModalService', () => {
   let service: CharacterModalService;

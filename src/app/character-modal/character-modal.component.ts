@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CharacterModalService } from '../services/character-modal.service';
+import { CharacterModalService } from './character-modal.service';
 
 @Component({
   selector: 'app-character-modal',

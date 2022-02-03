@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Elf",
+        "otherNames":[],
+        "description": ""
+      },
+      {
+        "id": 2,
+        "name": "Human",
+        "otherNames":[],
+        "description": ""
+      },
+      {
+        "id": 3,
+        "name": "Ainu",
+        "otherNames":[],
+        "description": ""
+      },
+      {
+        "id": 4,
+        "name": "Dwarf",
+        "otherNames":[],
+        "description": ""
+      },
+      {
+        "id": 5,
+        "name": "Dragon",
+        "otherNames":[],
+        "description": ""
+      }
+]
