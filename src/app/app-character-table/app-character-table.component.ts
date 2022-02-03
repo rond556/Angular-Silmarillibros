@@ -49,14 +49,16 @@ export class AppCharacterTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.characterSub = this.characterTableService.getCharacters().subscribe({
+    /*this.characterSub = this.characterTableService.getCharacters().subscribe({
       next: characters => this.characters = characters,
       error: err => this.errorMessage = err
     });
     this.racesSub = this.characterTableService.getRaces().subscribe({
       next: races => this.races = races,
       error: err => this.errorMessage = err
-    });
+    });*/
+    this.characters = this.characterTableService.getCharacters();
+    this.races = this.characterTableService.getRaces();
     this.filteredCharacters = this.characters;
     this.sortByName();
   }
