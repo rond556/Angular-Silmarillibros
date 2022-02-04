@@ -8,11 +8,11 @@ import { CharacterTableService } from './character-table.service';
 
 
 @Component({
-  selector: 'app-character-table',
-  templateUrl: './app-character-table.component.html',
-  styleUrls: ['./app-character-table.component.css']
+  selector: 'character-table',
+  templateUrl: './character-table.component.html',
+  styleUrls: ['./character-table.component.css']
 })
-export class AppCharacterTableComponent implements OnInit {
+export class CharacterTableComponent implements OnInit {
   pageTitle: string = "Character List";
   showImage: boolean = false;
   nameSorted: boolean = false;
@@ -88,7 +88,7 @@ export class AppCharacterTableComponent implements OnInit {
     this.nameSorted = false;
   }
 
-  open(characterId: number) {
+  openModal(characterId: number) {
     const modalRef = this.modalService.open(CharacterModalComponent, {size: 'lg', windowClass: 'modal-xl'});
     modalRef.componentInstance.character = this.characters.find(i => i.id ==  characterId);
   }

@@ -14,6 +14,10 @@ thead th:nth-child(1) {
     width: 60%;
   }
 
+.race-filter{
+  margin-top: 10px;
+  margin-left: 200px;
+}
 #character-art{
     max-width: 230px;
 }

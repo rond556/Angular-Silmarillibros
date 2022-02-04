@@ -10,12 +10,12 @@
             </div>
         </div>
             <div>
-                <button class="btn btn-primary" (click)="resetFilters()">All</button>
-                <button class="btn btn-primary" (click)="this.raceListFilter='Ainu'">Ainu</button>
-                <button class="btn btn-primary" (click)="this.raceListFilter='Maia'">Maia</button>
-                <button class="btn btn-primary" (click)="this.raceListFilter='Elf'">Elf</button>
-                <button class="btn btn-primary" (click)="this.raceListFilter='Human'">Human</button>
-                <button class="btn btn-primary" (click)="this.raceListFilter='Dwarf'">Dwarf</button>
+                <button class="btn btn-primary race-filter" (click)="resetFilters()">All</button>
+                <button class="btn btn-primary race-filter" (click)="this.raceListFilter='Ainu'">Ainu</button>
+                <button class="btn btn-primary race-filter" (click)="this.raceListFilter='Maia'">Maia</button>
+                <button class="btn btn-primary race-filter" (click)="this.raceListFilter='Elf'">Elf</button>
+                <button class="btn btn-primary race-filter" (click)="this.raceListFilter='Human'">Human</button>
+                <button class="btn btn-primary race-filter" (click)="this.raceListFilter='Dwarf'">Dwarf</button>
                 
             </div>
            
@@ -36,12 +36,12 @@
                 <tbody>
                     <tr class="character-row" *ngFor="let character of filteredCharacters">
                         <td>
-                                <button class="btn btn-link" (click)="open(character.id)">
+                                <button class="btn btn-link" (click)="openModal(character.id)">
                                     <img *ngIf="showImage" id="character-art" [src]="character.imagePath"
                                                             [title]="character.name">
                                 </button>
                         </td>
-                        <td>{{character.name}}</td>
+                        <td><a href="#!" (click)="openModal(character.id)">{{character.name}}</a></td>
                         <td>{{character.race}}</td>
                     </tr>
 
